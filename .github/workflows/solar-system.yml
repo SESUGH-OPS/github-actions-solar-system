@@ -56,7 +56,7 @@ jobs:
             continue-on-error: true  # Prevents job from failing if this step fails
           
           - name: Upload Code-Coverage Result  # Step 5
-            uses: actions/upload-artifact@v2
+            uses: actions/upload-artifact@v3
             with:
              name: Code-Coverage-Result  # Name of the artifact
              path: coverage  # Directory where code coverage reports are stored
