@@ -60,4 +60,4 @@ jobs:
             with:
              name: Code-Coverage-Result  # Name of the artifact
              path: coverage  # Directory where code coverage reports are stored
-             retention-days: 5  # Number of days to retain the artifact
+             retention-days: 5  # Number of days to retain the artifact adn display
