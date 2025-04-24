@@ -3,16 +3,16 @@ on:
   workflow_call:
     inputs:
         ingress-url:
-            descripton: Provide the Ingress URL
+            descripton: 
             required: true
             type: string
 
-            
+
 jobs:
   integration-test:
     runs-on: ubuntu-latest
     steps:
       - env:
-          URL: '${{ needs.dev-deploy.outputs.APP_INGRESS_URL }}'
+          URL: '${{ inputs.ingress-url }}'
         run: |
           curl https://$URL/live -s -k | jq -r .status | grep -i live
